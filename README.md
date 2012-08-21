@@ -2,9 +2,9 @@
 
 **Note:**
 
-The intent of this quiz isn't to be a brain-buster. It is meant for recruiters to present to front-end developer candidates.
+The purpose of this quiz isn't to be a brain-buster. It is meant for recruiters to present to front-end developer candidates.
 
-The intent to weed out some "Just use jQuery" applicants, but allow those that know JavaScript to pass fairly easily.
+The intent is to weed out some "Just use jQuery" applicants, but allow those that know JavaScript to pass fairly easily.
 
 ## Intro Questions
 
