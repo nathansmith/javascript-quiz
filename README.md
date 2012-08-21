@@ -87,3 +87,11 @@ The intent is to weed out some "Just use jQuery" applicants, but allow those tha
 20. How do `parseInt` and `parseFloat` differ? When would you use a number's `toFixed()` method? In what instance might the following code snippet actually make sense to use?
 
         var my_number = my_string - 0;
+
+21. Write a function named `sum` that returns the total of any number of parameters. Example&hellip;
+
+        // This should return 15
+        sum(1, 2, 3, 4, 5);
+
+        // This should return 10
+        sum(5, null, 5);
