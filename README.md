@@ -97,4 +97,4 @@ The intent is to weed out some "Just use jQuery" applicants, but allow those tha
         sum(5, null, 5);
 
         // Should equal 10
-        sum('', 1, false, 1, true, 1, 'A', 1, 'B', 1, 'C', 1, 'D', 1, 'E', 1, 'F', 1, 'G', 1);
+        sum(1, false, 1, true, 1, 'A', 1, 'B', 1, 'C', 1, 'D', 1, 'E', 1, 'F', 1, 'G', 1);
