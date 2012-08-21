@@ -74,7 +74,6 @@ The intent is to weed out some "Just use jQuery" applicants, but allow those tha
           <li>
             <a href="#">Special link 3</a>
           </li>
-          &hellip;
         </ul>
 
 18. What does this snippet of code do?
