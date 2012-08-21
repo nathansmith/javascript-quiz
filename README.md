@@ -1,6 +1,10 @@
 # JavaScript Quiz
 
-**Note:** The intent of this quiz isn't to be a brain-buster. It is meant for recruiters to present to front-end developer candidates. The intent to weed out some "Just use jQuery" applicants, but allow those that know JavaScript to pass fairly easily.
+**Note:**
+
+The intent of this quiz isn't to be a brain-buster. It is meant for recruiters to present to front-end developer candidates.
+
+The intent to weed out some "Just use jQuery" applicants, but allow those that know JavaScript to pass fairly easily.
 
 ## Intro Questions
 
@@ -46,7 +50,7 @@
           // What is 'foo' aliased to?
         })(this);
 
-13. In JavaScript (and the DOM), some global variables are actually mutable, such as: `window`, `document`, and `undefined`. How would you write code to ensure these were predictably available for use? Assuming someone had injected this code, how would you work around it? (Hint: See the previous question.)
+13. In JavaScript (and the DOM), some global variables are actually mutable, such as: `window`, `document`, and `undefined`. How would you write code to ensure these were predictably available for use? Assuming someone had injected this code, how would you work around it? (*Hint:* See the previous question.)
 
         var window = '';
         var document = 0;
