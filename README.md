@@ -22,23 +22,29 @@ The intent is to weed out some "Just use jQuery" applicants, but allow those tha
 
 06. Why do these yield different results?
 
-        "1" + 2 +  3 ; // Equals "123"
-         3  + 2 + "1"; // Equals "51"
-         3  + 2 +  1 ; // Equals 6
+    ```js
+    "1" + 2 +  3 ; // Equals "123"
+     3  + 2 + "1"; // Equals "51"
+     3  + 2 +  1 ; // Equals 6
+    ```
 
 07. Why is `0.3` *not* the result of the following addition? How do you work around this bug?
 
-        0.1 + 0.2; // Equals 0.30000000000000004
+    ```js
+    0.1 + 0.2; // Equals 0.30000000000000004
+    ```
 
 08. Describe how variable hoisting works, and how to avoid bugs that may arise from it.
 
 09. How do these differ?
 
-        function foo(){}
+    ```js
+    function foo(){}
+    
+    // versus
 
-        // versus
-
-        var foo = function(){};
+    var foo = function(){};
+    ````
 
 10. When might you use a function's `call()` method, or its `apply()` method?
 
@@ -46,15 +52,19 @@ The intent is to weed out some "Just use jQuery" applicants, but allow those tha
 
 12. In the following example, what is foo aliased to? (*Hint:* It is what `this` means.)
 
-        (function(foo) {
-          // What is 'foo' aliased to?
-        })(this);
+    ```js
+    (function(foo) {
+      // What is 'foo' aliased to?
+    })(this);
+    ```
 
 13. In JavaScript (and the DOM), some global variables are actually mutable, such as: `window`, `document`, and `undefined`. How would you write code to ensure these were predictably available for use? Assuming someone had injected this code, how would you work around it? (*Hint:* See the previous question.)
 
-        var window = '';
-        var document = 0;
-        var undefined = true;
+    ```js
+    var window = '';
+    var document = 0;
+    var undefined = true;
+    ```
 
 14. In one line of code, how you would make a copy of an array?
 
@@ -64,37 +74,48 @@ The intent is to weed out some "Just use jQuery" applicants, but allow those tha
 
 17. Describe how event delegation works, and when you should use it to handle UI interaction. Example markup&hellip;
 
-        <ul id="special">
-          <li>
-            <a href="#">Special link 1</a>
-          </li>
-          <li>
-            <a href="#">Special link 2</a>
-          </li>
-          <li>
-            <a href="#">Special link 3</a>
-          </li>
-        </ul>
+    ```html
+    <ul id="special">
+      <li>
+        <a href="#">Special link 1</a>
+      </li>
+      <li>
+        <a href="#">Special link 2</a>
+      </li>
+      <li>
+        <a href="#">Special link 3</a>
+      </li>
+    </ul>
+    ```
 
 18. What does this snippet of code do?
 
-        var foo = bar ? bar : 0;
+    ```js
+    var foo = bar ? bar : 0;
+    ```
 
 19. When might you write something like this, and what is it shorthand for?
 
-        foo && foo.bar();
+    ```js
+    foo && foo.bar();
+    ```
 
 20. How do `parseInt` and `parseFloat` differ? When would you use a number's `toFixed()` method? In what instance might the following code snippet actually make sense to use?
 
-        var my_number = my_string - 0;
+    ```js
+    var my_number = my_string - 0;
+    ```
 
 21. Write a function named `sum` that returns the total of any number of parameters. Example&hellip;
 
-        // Should equal 15
-        sum(1, 2, 3, 4, 5);
+    ```js
+    // Should equal 15
+    sum(1, 2, 3, 4, 5);
 
-        // Should equal 10
-        sum(5, null, 5);
 
-        // Should equal 10
-        sum(1, false, 1, true, 1, 'A', 1, 'B', 1, 'C', 1, 'D', 1, 'E', 1, 'F', 1, 'G', 1);
+    // Should equal 10
+    sum(5, null, 5);
+
+    // Should equal 10
+    sum(1, false, 1, true, 1, 'A', 1, 'B', 1, 'C', 1, 'D', 1, 'E', 1, 'F', 1, 'G', 1);
+    ```
