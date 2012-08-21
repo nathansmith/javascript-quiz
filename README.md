@@ -62,7 +62,20 @@ The intent is to weed out some "Just use jQuery" applicants, but allow those tha
 
 16. Explain how `delete` works. What types of things cannot be deleted?
 
-17. Describe how event delegation works, and when you should use it to handle UI interaction.
+17. Describe how event delegation works, and when you should use it to handle UI interaction. Example markup&hellip;
+
+        <ul id="special">
+          <li>
+            <a href="#">Special link 1</a>
+          </li>
+          <li>
+            <a href="#">Special link 2</a>
+          </li>
+          <li>
+            <a href="#">Special link 3</a>
+          </li>
+          &hellip;
+        </ul>
 
 18. What does this snippet of code do?
 
