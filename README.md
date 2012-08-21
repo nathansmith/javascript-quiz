@@ -4,11 +4,11 @@ Note: The intent of this quiz isn't to be a brain-buster. It is meant for recrui
 
 ## Intro Questions
 
-01. When might comparative type coercion occur? How would you avoid it? How would you change a "falsey" or "truthy" value into a real boolean?
+01. When might comparative type coercion occur? How would you avoid it? How would you change a "falsy" or "truthy" value into a real boolean?
 
-02. Describe how variable scope works. Explain how to create a closure, using a self-executing anonymous function (also called IIFE: immediately-invoked function expression).
+02. Describe how variable scope works. Explain how to create a closure using a self-executing anonymous function (also called IIFE: immediately-invoked function expression).
 
-03. Explain briefly how prototypical inheritance differs from class-based, "classical" inhericance.
+03. Explain briefly how prototypical inheritance differs from class-based, "classical" inheritance.
 
 04. Describe how the "module pattern" works. Explain how the "revealing module pattern" expands upon it.
 
@@ -22,11 +22,11 @@ Note: The intent of this quiz isn't to be a brain-buster. It is meant for recrui
          3  + 2 + "1"; // Equals "51"
          3  + 2 +  1 ; // Equals 6
 
-07. Why is `0.3` not the result of the following addition? How do you work around this bug?
+07. Why isn't `0.3` the result of the following addition? How do you work around this issue?
 
         0.1 + 0.2; // Equals 0.30000000000000004
 
-08. Describe how variable hoisting works, and how to account for it.
+08. Describe how variable hoisting works, and how to avoid bugs that arise from it.
 
 09. How do these differ?
 
@@ -36,7 +36,7 @@ Note: The intent of this quiz isn't to be a brain-buster. It is meant for recrui
 
         var foo = function(){};
 
-10. When would you use `*.call()`? &mdash; When would you use `*.apply()`?
+10. When would you use a function's `call()` method? &mdash; When would you use a function's `apply()` method?
 
 11. Explan how to check if a variable is an array.
 
@@ -46,13 +46,13 @@ Note: The intent of this quiz isn't to be a brain-buster. It is meant for recrui
           // What is 'foo' aliased to?
         })(this);
 
-13. In JavaScript (and the DOM), variables we consider universal are actually mutable: window, document, undefined. How would you write code to ensure these were predictably available for use? Meaning, assuming someone had injected this code, how would you work around it? (Hint: See the previous question.)
+13. In JavaScript (and the DOM), variables we consider universal are actually mutable: e.g. `window`, `document`, and `undefined`. How would you write code to ensure these were predictably available for use? Meaning, assuming someone had injected this code, how would you work around it? (Hint: See the previous question.)
 
         var window = '';
         var document = 0;
         var undefined = true;
 
-14. In one line of code, how you would clone (make a copy of) an array?
+14. In one line of code, how you would make a copy of an array?
 
 15. What is the difference between `setInterval` and `setTimeout`? &mdash; Bonus: What is the lowest cross-browser increment that each can accurately use?
 
@@ -68,6 +68,6 @@ Note: The intent of this quiz isn't to be a brain-buster. It is meant for recrui
 
         foo && foo.bar();
 
-20. How do `parseInt` and `parseFloat` differ? When would you use `*.toFixed`? &mdash; In what instance might the following code snippet actually make sense to use?
+20. How do `parseInt` and `parseFloat` differ? When would you use a number's `toFixed()` method? &mdash; In what instance might the following code snippet actually make sense to use?
 
         var my_number = my_string - 0;
