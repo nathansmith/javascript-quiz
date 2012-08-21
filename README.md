@@ -1,6 +1,6 @@
 # JavaScript Quiz
 
-Note: The intent of this quiz isn't to be a brain-buster. It is meant for recruiters to present to front-end developer candidates. The intent to weed out some "Just use jQuery" applicants, but allow those that know JavaScript to pass fairly easily.
+**Note:** The intent of this quiz isn't to be a brain-buster. It is meant for recruiters to present to front-end developer candidates. The intent to weed out some "Just use jQuery" applicants, but allow those that know JavaScript to pass fairly easily.
 
 ## Intro Questions
 
@@ -36,17 +36,17 @@ Note: The intent of this quiz isn't to be a brain-buster. It is meant for recrui
 
         var foo = function(){};
 
-10. When would you use `*.call()`? &mdash; When would you use `*.apply()`?
+10. When would you use `*.call`? &mdash; When would you use `*.apply`?
 
 11. Explan how to check if a variable is an array.
 
-12. In the following example, what is foo aliased to? (Hint: It is what `this` means.)
+12. In the following example, what is foo aliased to? (*Hint:* It is what `this` means.)
 
         (function(foo) {
           // What is 'foo' aliased to?
         })(this);
 
-13. In JavaScript (and the DOM), variables we consider universal are actually mutable: window, document, undefined. How would you write code to ensure these were predictably available for use? Meaning, assuming someone had injected this code, how would you work around it? (Hint: See the previous question.)
+13. In JavaScript (and the DOM), variables we consider universal are actually mutable: `window`, `document`, `undefined`. How would you write code to ensure these were predictably available for use? Meaning, assuming someone had injected this code, how would you work around it? (*Hint:* See the previous question.)
 
         var window = '';
         var document = 0;
