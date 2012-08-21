@@ -42,7 +42,7 @@ The intent is to weed out some "Just use jQuery" applicants, but allow those tha
 
 10. When would you use a function's `call()` method, or its `apply()` method?
 
-11. Explan how to check if a variable is an array.
+11. Explain how to determine if a variable is an array or an object. (*Hint:* `typeof` lies!)
 
 12. In the following example, what is foo aliased to? (*Hint:* It is what `this` means.)
 
