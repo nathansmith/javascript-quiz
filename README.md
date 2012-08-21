@@ -40,7 +40,7 @@ The intent is to weed out some "Just use jQuery" applicants, but allow those tha
 
         var foo = function(){};
 
-10. When would you use a function's `call()` method, or its `apply()` method?
+10. When might you use a function's `call()` method, or its `apply()` method?
 
 11. Explain how to determine if a variable is an array or an object. (*Hint:* `typeof` lies!)
 
