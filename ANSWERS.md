@@ -69,7 +69,7 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
     var Dog = new Animal();
     Dog.prototype.legs = 4;
 
-    // Sparky has 4 legs, is alive, and is brown.
+    // Sparky is alive, has 4 legs, and is brown.
     var sparky = new Dog();
     sparky.color = 'brown';
 
@@ -274,7 +274,7 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
     var undefined = true;
     ```
 
-    Building upon the concept from the previous question, in order to protect against the overwriting of otherwise reliably available variables, we have to pass them back into the scope of a closure, re-aliased to their correct values. Note that we're not actually passing in a value for `undefined` because the browser's concept of nothingness is what we want it to be re-aliased to. Since a third parameter is not specified, `undefined` now means what it should: Nothing.
+    Building upon the concept from the previous question, in order to protect against the overwriting of otherwise reliably available variables, we have to pass them back into the scope of a closure, re-aliased to their correct values. Note that we're not actually passing in a value for `undefined` because the browser's concept of nothingness is what we want it to be re-aliased to. Since a third parameter is not specified, `undefined` now means what it should: Nothingness.
 
     ```js
     (function(window, document, undefined) {
@@ -285,7 +285,7 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
 
 14. In one line of code, how you would make a copy of an array?
 
-    Acceptable answers would include using the `.slice()` method, or concatenating with an empty array. Calling `slice` with no parameters simply returns a copy of the original array (rather than a reference to it, like the last example below). Concatenating the contents of the `old_array` to an empty array (`[]`) freshly populates the new array with the values from the old one.
+    Acceptable answers would include using the `slice()` method, or concatenating with an empty array. Calling `slice()` with no parameters simply returns a copy of the original array (rather than a reference to it, like the last example below). Concatenating the contents of the `old_array` to an empty array `[]` freshly populates the new array with the values from the old one.
 
     ```js
     var old_array = [1, 2, 3];
@@ -297,7 +297,7 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
     var new_array_2 = [].concat(old_array);
 
     // This does NOT work, because any edits to new_array_3
-    // will alter the original, old_array. Not what we want.
+    // will alter the original, old_array. NOT what we want!
     var new_array_3 = old_array;
     ```
 
@@ -356,9 +356,9 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
     // Array example
     //
 
-    var my_array = ['zero', 'one', 'two', 'three'];
+    var my_array = ['zero', 'one', 'two'];
 
-    // Outputs 4
+    // Outputs 3
     console.log(my_array.length);
 
     // Outputs "one"
@@ -369,7 +369,7 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
     // Outputs undefined
     console.log(my_array[1]);
 
-    // Outputs 4
+    // Outputs 3
     console.log(my_array.length);
     ```
 
@@ -558,7 +558,7 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
       // Something to iterate on
       var i = arguments.length;
 
-      // Loop through all the parameters.
+      // Loop through all the parameters
       while (i--) {
         // Multiply by 10, to account for peculiarities
         // of doing addition with floating point numbers.

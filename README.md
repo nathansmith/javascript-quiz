@@ -39,11 +39,11 @@ The intent is to weed out some "Just use jQuery" applicants, but allow those tha
 09. How do these differ?
 
     ```js
-    function foo(){}
+    function foo() {}
 
     // versus
 
-    var foo = function(){};
+    var foo = function() {};
     ```
 
 10. When might you use a function's `call()` method, or its `apply()` method?
