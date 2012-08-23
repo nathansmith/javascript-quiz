@@ -229,6 +229,33 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
 
 10. When might you use a function's `call()` method, or its `apply()` method?
 
+    The `call()` method takes any number of parameters, the first of which is the context of `this`. Let's say you wanted to set properties on a constructor. That might look like this&hellip;
+
+    ```js
+    function Person(first_name, last_name) {
+      // Default to John Doe
+      this.first_name = first_name || 'John';
+      this.last_name = last_name || 'Doe';
+
+      return this;
+    }
+
+    // Change the defaults Pam Jones
+    Person.call(this, 'Pam', 'Jones');
+    ```
+
+    The `apply()` method is similar to `call()`, except that it takes a single array as its second parameter (instead of an arbitrary number of parameters). It is typically used to use built-in functions from object prototypes. The following example can take any number of values and concatenate them into a single string&hellip;
+
+    ```js
+    // Take any number of parameters, stringify them
+    function concatenate() {
+      return String.prototype.concat.apply('', arguments);
+    }
+
+    // Outputs 'false1hello'
+    concatenate(false, 1, 'hello');
+    ```
+
 11. Explain how to determine if a variable is an array or an object. (*Hint:* `typeof` lies!)
 
     **Answer:**
