@@ -298,7 +298,7 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
     is_this_an_array(my_object);
     ```
 
-    Another way to answer this question would be to use a more obscure method, calling `.toString()` to convert the variable in question to a string representation of its type. This will work for a real array, but fail for the `arguments` object, which when converted into a string is `[object Arguments]`.
+    Another way to answer this question would be to use a more obscure method, calling `toString()` to convert the variable in question to a string representation of its type. This will work for a real array, but fail for the `arguments` object, which when converted into a string is `[object Arguments]`.
 
     ```js
     // Real array
