@@ -195,7 +195,7 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
 
     **Answer:**
 
-    Believe it or not, this is by design. It is simply how floating point calculations work, but does not make sense when you encounter it in practical usage. In order to do math with any kind of decimal precision, you need to multiply values by `10`, do addition or subtraction as full integers, and then divide back by `10`. It is a laborious, but necessary step, especially when calculating anything related to money in the browser.
+    Believe it or not, this is by design. It is simply how floating-point calculations work, but does not make sense when you encounter it in practical usage. In order to do math with any kind of decimal precision, you need to multiply values by `10`, do addition or subtraction as full integers, and then divide back by `10`. It is a laborious, but necessary step, especially when calculating anything related to money in the browser.
 
     More on floating-point arithmetic here&hellip;
 
@@ -552,7 +552,7 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
       // Start from zero
       var total = 0;
 
-      // Floating points, bah!
+      // Floating-points, bah!
       var ten = 10;
 
       // Undefined, set in the loop
@@ -564,7 +564,7 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
       // Loop through all the parameters
       while (i--) {
         // Multiply by 10, to account for peculiarities
-        // of doing addition with floating point numbers.
+        // of doing addition with floating-point numbers.
         value = parseFloat(arguments[i]) * ten;
 
         // Is it not, not a number?
@@ -575,7 +575,7 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
       }
 
       // Divide back by 10, because we multiplied by
-      // 10 to account for floating point weirdness.
+      // 10 to account for floating-point weirdness.
       return total/ten;
     }
     ```
