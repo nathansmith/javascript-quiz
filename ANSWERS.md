@@ -37,7 +37,7 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
 
     **Answer:**
 
-    Variables in JavaScript are implicitly global (a very bad thing) unless you declare them with the preceding `var` keyword. Doing so ensures that the variable is scoped no higher than the nearest containing function. A self-executing anonymous function (aka IIFE) is a function that immediately runs, keeping the variables inside it safely quarantined away from the global scope.
+    Variables in JavaScript are implicitly global (a very bad thing) unless you declare them with a preceding `var` keyword. Doing so ensures that the variable is scoped no higher than the nearest containing function. A self-executing anonymous function (aka IIFE) is a function that immediately runs, keeping the variables inside it safely quarantined away from the global scope.
 
     ```js
     // These are functions
@@ -53,6 +53,9 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
       foo = 'bar';
     })();
     ```
+
+    For more on the topic of closures/IIFE:<br />
+    http://benalman.com/news/2010/11/immediately-invoked-function-expression
 
 03. Explain briefly how prototypical inheritance differs from class-based, "classical" inheritance.
 
