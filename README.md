@@ -23,8 +23,8 @@ The intent is to weed out some "Just use jQuery" applicants, but allow those tha
 06. Why do these yield different results?
 
     ```js
-    '1' + 2 +  3 ; // Equals "123"
-     3  + 2 + '1'; // Equals "51"
+    '1' + 2 +  3 ; // Equals '123'
+     3  + 2 + '1'; // Equals '51'
      3  + 2 +  1 ; // Equals 6
     ```
 

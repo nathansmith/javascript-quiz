@@ -170,20 +170,20 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
 06. Why do these yield different results?
 
     ```js
-    '1' + 2 +  3 ; // Equals "123"
-     3  + 2 + '1'; // Equals "51"
+    '1' + 2 +  3 ; // Equals '123'
+     3  + 2 + '1'; // Equals '51'
      3  + 2 +  1 ; // Equals 6
     ```
 
     **Answer:**
 
-    When the JavaScript interpreter sees a string value (contained within quotes), it immediately begins type coercing all the following values into strings. In the first line, `"1"` is a string, thus `2` becomes `"2"` and `3` becomes `"3"`. They are simply appended to one another, the same way this might work&hellip;
+    When the JavaScript interpreter sees a string value (contained within quotes), it immediately begins type coercing all the following values into strings. In the first line, `'1'` is a string, thus `2` becomes `'2'` and `3` becomes `'3'`. They are simply appended to one another, the same way this might work&hellip;
 
     ```js
-    'A' + 'B' + 'C'; // Equals "ABC"
+    'A' + 'B' + 'C'; // Equals 'ABC'
     ```
 
-    On the second line, because `3` and `2` are real numbers, so those are first added together, yielding `5`. The next value `"1"` is actually a string, so `5` is converted to `"5"`, and it is string concatenated with `"1"`, yielding `"51"` as a string.
+    On the second line, because `3` and `2` are real numbers, so those are first added together, yielding `5`. The next value `'1'` is actually a string, so `5` is converted to `'5'`, and it is string concatenated with `'1'`, yielding `'51'` as a string.
 
     On the third line, all the values are real numbers, so they are added together as expected, yielding the number `6`.
 
@@ -233,7 +233,7 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
 
     **Answer:**
 
-    If you only checked a variable's `typeof`, regardless if it were an object or an array, it would reply `"object"`.
+    If you only checked a variable's `typeof`, regardless if it were an object or an array, it would reply `'object'`.
 
     One possible answer to this question would be to check if it's an object, *and* determine if it has a numeric `.length` (which may be `0` if it's an empty array). However, this would also work for the `arguments` object (all the parameters passed into any given function), which is technically *not* an array.
 
@@ -364,7 +364,7 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
     // Outputs 3
     console.log(my_array.length);
 
-    // Outputs "one"
+    // Outputs 'one'
     console.log(my_array[1]);
 
     delete my_array[1];
@@ -486,7 +486,7 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
 
     The `parseFloat` function will convert any number or string into a decimal representation, also culling any string values that follow. Also, 'parseInt' requires a "radix" (usually `10`) to be passed in as the second parameter. Otherwise, values such as `09` change to `0` instead of `9`.
 
-    Using `parseFloat` will not convert a number into a certain number of decimal points. For instance, `"1.50"` (a string representing one dollar and fifty cents) would simply become `1.5`. To ensure a string representation of the correct number of decimal points, `toFixed()` must be used.
+    Using `parseFloat` will not convert a number into a certain number of decimal points. For instance, `'1.50'` (a string representing one dollar and fifty cents) would simply become `1.5`. To ensure a string representation of the correct number of decimal points, `toFixed()` must be used.
 
     ```js
     var radix = 10;
@@ -503,7 +503,7 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
     // Equals 1.5
     parseFloat('1.50');
 
-    // Equals "1.50"
+    // Equals '1.50'
     parseFloat('1.5000').toFixed(2);
     ```
 
