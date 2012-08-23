@@ -28,7 +28,7 @@ The intent is to weed out some "Just use jQuery" applicants, but allow those tha
      3  + 2 +  1 ; // Equals 6
     ```
 
-07. Why is `0.3` *not* the result of the following addition? How do you work around this bug?
+07. Why is `0.3` *not* the result of the following addition? How do you work around this peculiarity?
 
     ```js
     0.1 + 0.2; // Equals 0.30000000000000004
@@ -40,11 +40,11 @@ The intent is to weed out some "Just use jQuery" applicants, but allow those tha
 
     ```js
     function foo(){}
-    
+
     // versus
 
     var foo = function(){};
-    ````
+    ```
 
 10. When might you use a function's `call()` method, or its `apply()` method?
 
