@@ -271,24 +271,58 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
 
     If you only checked a variable's `typeof`, regardless if it were an object or an array, it would reply `'object'`.
 
-    One possible answer to this question would be to check if it's an object, *and* determine if it has a numeric `.length` (which may be `0` if it's an empty array). However, this would also work for the `arguments` object (all the parameters passed into any given function), which is technically *not* an array.
+    One possible answer to this question would be to check if it's an object, *and* determine if it has a numeric `.length` (which may be `0` if it's an empty array). However, this would also work for the `arguments` object (all the parameters passed into any given function), which is technically *not* an array. Additionally, this falls down if an object should have a `.length` property.
 
     ```js
+    // Real array
     var my_array = [];
 
-    if (typeof my_array === 'object' && !isNaN(my_array.length)) {
-      console.log('Congrats, you have an array!');
+    // Imposter!
+    var my_object = {};
+    my_object.length = 0;
+
+    // Potentially faulty
+    function is_this_an_array(param) {
+      if (typeof param === 'object' && !isNaN(param.length)) {
+        console.log('Congrats, you have an array!');
+      }
+      else {
+        console.log('Bummer, not an array');
+      }
     }
+
+    // Works
+    is_this_an_array(my_array);
+
+    // Works, but is incorrect
+    is_this_an_array(my_object);
     ```
 
-    Another way to answer this question would be to use a more obscure method, calling `.toString()` to convert the variable in question to a string representation of its type. This will work for a real array, but fail for the `arguments` object, which when converted into a string is `[object Arguments]`.
+    Another way to answer this question would be to use a more obscure method, calling `toString()` to convert the variable in question to a string representation of its type. This will work for a real array, but fail for the `arguments` object, which when converted into a string is `[object Arguments]`. It also won't be fooled by an object with a numeric `.length` attribute.
 
     ```js
+    // Real array
     var my_array = [];
 
-    if (Object.prototype.toString.call(my_array) === '[object Array]') {
-      console.log('Congrats, you have an array!');
+    // Imposter!
+    var my_object = {};
+    my_object.length = 0;
+
+    // Rock solid
+    function is_this_an_array(param) {
+      if (Object.prototype.toString.call(param) === '[object Array]') {
+        console.log('Congrats, you have an array!');
+      }
+      else {
+        console.log('Bummer, not an array');
+      }
     }
+
+    // Works
+    is_this_an_array(my_array);
+
+    // Not an array, yay!
+    is_this_an_array(my_object);
     ```
 
     Also, though [considered harmful in multi-frame DOM environments](http://perfectionkills.com/instanceof-considered-harmful-or-how-to-write-a-robust-isarray/), `instanceof` is a perfectly suited operator.
