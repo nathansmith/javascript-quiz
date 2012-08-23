@@ -26,7 +26,7 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
     if (a != b) {}
     ```
 
-    Sometimes you will have a variable that may be "truthy" or "falsy" itself, but need to infer a real `true` or `false` boolean from it. In such cases, you can use double negation `!!`, to say "not not something," the result of which isn't *something*, it's `true` or `false`.
+    Sometimes you will have a variable that may be "truthy" or "falsy" itself, but need to infer a real `true` or `false` boolean from it. In such cases, you can use double negation `!!`, to say "not not something," the result of which is either `true` or `false`.
 
     ```js
     // Is always a real boolean
@@ -73,10 +73,10 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
     var sparky = new Dog();
     sparky.color = 'brown';
 
-    // Now sparky has wings, as do all other dogs!
+    // Now sparky has 2 wings, as do all other dogs!
     Dog.prototype.wings = 2;
 
-    // Wait, you just killed all animals, including dogs, and sparky too. Oh no!
+    // We just killed all animals, including dogs, and sparky too. Oh no!
     Animal.prototype.is_alive = false;
     ```
 
@@ -84,9 +84,9 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
 
     **Answer:**
 
-    The "module pattern" expands upon the concept of a self-executing anonymous function, by having a `return` at the end, which exposes some properties/methods as publicly usable (and therefore, mutable). The result of this `return` is assigned to a variable, which serves as an app/module "namespace."
+    The "module pattern" expands upon the concept of a self-executing anonymous function, by having a `return` at the end, which exposes some properties/methods as publicly accessible (and therefore, mutable). The result of this `return` is assigned to a variable, which serves as an app/module "namespace."
 
-    The "revealing module pattern" works in much the same way, except instead of bundling up all properties/methods into a single object literal, local variables are aliased to an object literal at the end of the closure.
+    The "revealing module pattern" works in much the same way, except instead of bundling up all properties/methods into a single object literal, local variables are assigned to properties of an object literal at the end of the closure.
 
     ```js
     // Module Pattern
@@ -137,28 +137,30 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
 
     **Answer:**
 
-    A client-side MVC (model, view, controller) approach enforces "separation of concerns" across the front-end code of an app. You have *models* that handle the domain-specific information of your app, *controllers* that handle the user interactions (or programmatically triggered events), and *views* that take information from the model, and present it in a palatable way to the user. The view also contains elements which are interacted with, that the controller observes (and if need be, informs the model about).
+    A client-side MVC (model, view, controller) approach enforces "separation of concerns" across the front-end code of an app. You have *models* that handle the domain-specific information of your app, *controllers* that handle the user interactions (or programmatically triggered events), and *views* present information from the *model* in a palatable way to the user. A *view* also contains elements which are interacted with, that a *controller* observes (and if need be, informs a *model*).
 
-    MVVM differs slightly from MVC, in that it has "models," "views," and "view models." The view model handles the observation of events (handled by the controller in MVC), as well as the data-binding between the model and the view.
+    MVVM differs slightly from MVC, in that it has "models," "views," and "view models." A *view model* handles the observation of events (handled by a *controller* in MVC), as well as the data-binding between a *model* and a *view*.
 
-    Answers for preferred MV* frameworks may include: Backbone.js, Ember.js, Knockout.js. There are also MVC aspects to larger JS libraires, such as YUI or Dojo.
+    Answers for preferred MV* frameworks may include: Backbone.js, Ember.js, or Knockout.js. There are also MVC aspects to larger JS libraires, such as YUI and Dojo.
 
-    Backbone.js (Model View Router)
+    Backbone.js (Model View Router)<br />
     http://backbonejs.org
 
-    Ember.js (MVC)
+    Ember.js (MVC)<br />
     http://emberjs.com
 
-    Knockout.js (MVVM)
+    Knockout.js (MVVM)<br />
     http://knockoutjs.com
 
-    YUI App Framework (MVC)
+    YUI App Framework (MVC)<br />
     http://yuilibrary.com/yui/docs/app
 
-    Dojo MVC
+    Dojo MVC<br />
     http://dojotoolkit.org/reference-guide/1.8/dojox/mvc.html
 
-    **Note:** MVC and/or MVVM in JavaScript differ from frameworks such as .NET MVC or Ruby on Rails, in that, the entirety of the client-side MVC lives in the "V" of the server side framework. That is, HTML/CSS/JS, sitting atop a server side framework (that may or may not be MVC in nature).
+    **Note:**
+
+    MVC and/or MVVM in JavaScript differ from frameworks such as .NET MVC or Ruby on Rails, in that, the entirety of the client-side MVC lives in the "V" of the server side framework. That is, HTML/CSS/JS, sitting atop a server side framework (that may or may not be MVC in nature).
 
 ## Additional Questions
 
@@ -172,7 +174,7 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
 
     **Answer:**
 
-    When the JavaScript interpreter sees a string value (contained within quotes), it immediately begins type coercing all the following values into string. In the first line, `"1"` is a string, this `2` becomes `"2"` and `3` becomes `"3"`. They are simply appended to one another, the same way this might work&hellip;
+    When the JavaScript interpreter sees a string value (contained within quotes), it immediately begins type coercing all the following values into string. In the first line, `"1"` is a string, thus `2` becomes `"2"` and `3` becomes `"3"`. They are simply appended to one another, the same way this might work&hellip;
 
     ```js
     "A" + "B" + "C"; // Equals "ABC"
