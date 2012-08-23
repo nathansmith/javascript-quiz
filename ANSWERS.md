@@ -291,6 +291,16 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
     }
     ```
 
+    Also, though [considered harmful in multi-frame DOM environments](http://perfectionkills.com/instanceof-considered-harmful-or-how-to-write-a-robust-isarray/), `instanceof` is perfectly suited operator.
+
+    ```js
+    var my_array = [];
+
+    if (my_array instanceof Array) {
+      console.log('Congrats, you have an array!');
+    }
+    ```
+
 12. In the following example, what is foo aliased to? (*Hint:* It is what `this` means.)
 
     ```js
