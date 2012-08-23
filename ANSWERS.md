@@ -1,8 +1,10 @@
-# JavaScript Quiz
+# JavaScript Quiz &mdash; with Answers
 
 **Note:**
 
-If you've skipped the questions and come straight here, or have found this page because you're trying to cheat: Tisk, tisk! Joking aside though, if you're an applicant skimming these answers so that you can make it through an interview, bear in mind that a cheat sheet isn't the same as knowledge.
+If you've skipped the questions and come straight here, or have found this page because you're trying to cheat: Tisk, tisk!
+
+Joking aside though, if you're a job applicant skimming these answers so that you can make (fake?) it through an interview, bear in mind that a cheat sheet isn't the same as knowledge. You should still strive to understand these concepts.
 
 **:)**
 
@@ -12,7 +14,7 @@ If you've skipped the questions and come straight here, or have found this page 
 
     **Answer:**
 
-    Type coercion occurs when comparing values of different types. For instance, if you're comparing a number with a string, they will be changed on the fly (coerced) into a loose "truthy" or "falsy" comparison. To avoid type coercion, to ensure you are comparing values strictly and taking their potentially differing types into account, always use triple-equals `===` instead of the more commonly used (in other languages) double-equals `==`. Likewise, when comparing that two values are not the same, use `!==` instead of `!==`.
+    Type coercion occurs when comparing values of different types. For instance, if you're comparing a number with a string, they will be changed on the fly (coerced) into a loose "truthy" or "falsy" comparison. To avoid type coercion, to ensure you are comparing values strictly and taking their potentially differing types into account, always use triple-equals `===` instead of the more commonly used (in other languages) double-equals `==`. Likewise, when comparing if two values are *not* the same, use `!==` instead of `!=`.
 
     ```js
     // This is good
