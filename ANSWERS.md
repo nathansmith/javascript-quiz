@@ -238,18 +238,18 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
       this.last_name = last_name || 'Doe';
     }
 
-    // Change the defaults "Pam Jones"
+    // Pass in a new name
     function Person(first_name, last_name) {
       Human.call(this, first_name, last_name);
     }
 
+    // logs 'John Doe'
+    var john = new Person();
+    console.log(john.first_name, john.last_name);
+
+    // logs 'Pam Jones'
     var pam = new Person('Pam', 'Jones');
-
-    // logs 'Pam'
-    console.log(pam.first_name);
-
-    // logs 'Jones'
-    console.log(pam.last_name);
+    console.log(pam.first_name, pam.last_name);
     ```
 
     The `apply()` method is similar to `call()`, except that it takes a single array as its second parameter (instead of an arbitrary number of parameters). It is typically used to use built-in functions from object prototypes. The following example can take any number of values and concatenate them into a single string&hellip;
