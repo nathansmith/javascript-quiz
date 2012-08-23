@@ -243,11 +243,11 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
       Human.call(this, first_name, last_name);
     }
 
-    // logs 'John Doe'
+    // logs "John Doe"
     var john = new Person();
     console.log(john.first_name, john.last_name);
 
-    // logs 'Pam Jones'
+    // logs "Pam Jones"
     var pam = new Person('Pam', 'Jones');
     console.log(pam.first_name, pam.last_name);
     ```
