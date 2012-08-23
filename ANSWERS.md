@@ -160,7 +160,7 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
 
     **Note:**
 
-    MVC and/or MVVM in JavaScript differ from frameworks such as .NET MVC or Ruby on Rails, in that, the entirety of the client-side MVC lives in the "V" of the server side framework. That is, HTML/CSS/JS, sitting atop a server side framework &mdash; which itself may (or may not) be MVC in nature.
+    MVC and/or MVVM in JavaScript differ from frameworks such as .NET MVC or Ruby on Rails, in that, the entirety of a client-side MVC is housed in the "V" of a server-side framework. That is, HTML/CSS/JS, sitting atop a server-side framework &mdash; which itself may (or may not) be MVC in nature.
 
 ## Additional Questions
 
