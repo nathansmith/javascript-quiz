@@ -236,8 +236,6 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
       // Default to "John Doe"
       this.first_name = first_name || 'John';
       this.last_name = last_name || 'Doe';
-
-      return this;
     }
 
     // Change the defaults "Pam Jones"
