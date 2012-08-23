@@ -54,7 +54,7 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
     })();
     ```
 
-    For more on the topic of closures/IIFE:<br />
+    For more on this topic:<br />
     http://benalman.com/news/2010/11/immediately-invoked-function-expression
 
 03. Explain briefly how prototypical inheritance differs from class-based, "classical" inheritance.
