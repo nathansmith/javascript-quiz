@@ -484,9 +484,9 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
 
     The `parseInt` function will take a number or string, and convert it into a whole number. This is not the same as `Math.round()`, because it simply removes everything after a decimal point. It will also remove any string values that follow a number.
 
-    The `parseFloat` function will convert any number or string into a decimal representation, also culling any string values that follow. Also, 'parseInt' requires a "radix" (usually `10`) to be passed in as the second parameter. Otherwise, values such as `09` change to `0` instead of `9`.
+    The `parseFloat` function will convert any number or string into a decimal representation, also culling any string values that follow. Also, `parseInt` requires a "radix" (usually `10`) to be passed in as the second parameter. Otherwise, values such as `09` change to `0` instead of `9`.
 
-    Using `parseFloat` will not convert a number into a certain number of decimal points. For instance, `'1.50'` (a string representing one dollar and fifty cents) would simply become `1.5`. To ensure a string representation of the correct number of decimal points, `toFixed()` must be used.
+    Using `parseFloat` alone will not retain (nor add) a certain number decimal points. For instance, `'1.50'` (a string representing one dollar and fifty cents) would simply become `1.5`. To ensure a string representation of the correct number of decimal points, `toFixed()` must be used.
 
     ```js
     var radix = 10;
