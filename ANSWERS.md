@@ -291,7 +291,7 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
     }
     ```
 
-    Also, though [considered harmful in multi-frame DOM environments](http://perfectionkills.com/instanceof-considered-harmful-or-how-to-write-a-robust-isarray/), `instanceof` is perfectly suited operator.
+    Also, though [considered harmful in multi-frame DOM environments](http://perfectionkills.com/instanceof-considered-harmful-or-how-to-write-a-robust-isarray/), `instanceof` is a perfectly suited operator.
 
     ```js
     var my_array = [];
