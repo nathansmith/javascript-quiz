@@ -241,11 +241,11 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
     // Pass in a new name
     function Person(first_name, last_name, gender) {
       Human.call(this, first_name, last_name);
-      this.gender = gender || 'unspecified';
+      this.gender = gender || 'male';
     }
 
     // logs "John Doe is male"
-    var john = new Person(null, null, 'male');
+    var john = new Person();
     console.log(john.first_name, john.last_name, 'is ' + john.gender);
 
     // logs "Pam Jones is female"
