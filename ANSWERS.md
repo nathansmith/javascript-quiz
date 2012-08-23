@@ -451,7 +451,7 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
 
     **Answer:**
 
-    This is sometimes referred to as "short circuiting" a logical operator. You can think of it as a ternary with no `else` condition. Basically, the part before `&&` is evaluated, and if it is "truthy" (in this case, ensuring the existence of `foo`), the part after the `&&` is evaluated. In this case `foo.bar()` is a function, so it's executed.
+    This is sometimes referred to as "short circuiting" a logical operator. You can think of it as a ternary with no `else` condition. Basically, the part before `&&` is evaluated, and if it is "truthy" (in this case, ensuring the existence of `foo`), the part after the `&&` is evaluated. Since `foo.bar()` is a function, it is executed.
 
     This could be written out more verbosely as&hellip;
 
