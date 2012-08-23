@@ -170,17 +170,17 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
 06. Why do these yield different results?
 
     ```js
-    "1" + 2 +  3 ; // Equals "123"
-     3  + 2 + "1"; // Equals "51"
+    '1' + 2 +  3 ; // Equals "123"
+     3  + 2 + '1'; // Equals "51"
      3  + 2 +  1 ; // Equals 6
     ```
 
     **Answer:**
 
-    When the JavaScript interpreter sees a string value (contained within quotes), it immediately begins type coercing all the following values into string. In the first line, `"1"` is a string, thus `2` becomes `"2"` and `3` becomes `"3"`. They are simply appended to one another, the same way this might work&hellip;
+    When the JavaScript interpreter sees a string value (contained within quotes), it immediately begins type coercing all the following values into strings. In the first line, `"1"` is a string, thus `2` becomes `"2"` and `3` becomes `"3"`. They are simply appended to one another, the same way this might work&hellip;
 
     ```js
-    "A" + "B" + "C"; // Equals "ABC"
+    'A' + 'B' + 'C'; // Equals "ABC"
     ```
 
     On the second line, because `3` and `2` are real numbers, so those are first added together, yielding `5`. The next value `"1"` is actually a string, so `5` is converted to `"5"`, and it is string concatenated with `"1"`, yielding `"51"` as a string.
