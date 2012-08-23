@@ -252,7 +252,7 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
     console.log(pam.first_name, pam.last_name);
     ```
 
-    The `apply()` method is similar to `call()`, except that it takes a single array as its second parameter (instead of an arbitrary number of parameters). It is typically used to use built-in functions from object prototypes. The following example can take any number of values and concatenate them into a single string&hellip;
+    The `apply()` method is similar to `call()`, except that it takes a single array as its second parameter (instead of an arbitrary number of parameters). It is typically used to run built-in functions from object prototypes. The following example can take any number of values and concatenate them into a single string&hellip;
 
     ```js
     // Take any number of parameters, stringify them
