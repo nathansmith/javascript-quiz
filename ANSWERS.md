@@ -325,7 +325,10 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
     is_this_an_array(my_object);
     ```
 
-    Also, though [considered harmful in multi-frame DOM environments](http://perfectionkills.com/instanceof-considered-harmful-or-how-to-write-a-robust-isarray/), `instanceof` is a perfectly suited operator.
+    Also, though potentially unreliable in multi-frame DOM environments, `instanceof` is a perfectly suited operator.
+
+    Context: "Instanceof Considered Harmful&hellip;"<br />
+    http://perfectionkills.com/instanceof-considered-harmful-or-how-to-write-a-robust-isarray
 
     ```js
     var my_array = [];
