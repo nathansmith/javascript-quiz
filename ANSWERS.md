@@ -194,6 +194,10 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
 
     Believe it or not, this is by design. It is simply how floating point calculations work, but does not make sense when you encounter it in practical usage. In order to do math with any kind of decimal precision, you need to multiply values by `10`, do addition or subtraction as full integers, and then divide back by `10`. It is a laborious, but necessary step, especially when calculating anything related to money in the browser.
 
+    More on floating-point arithmetic here&hellip;
+
+    http://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html
+
 08. Describe how variable hoisting works, and how to avoid bugs that may arise from it.
 
   Regardless of where you declare your variables within the scope of a function, the JavaScript interpreter will always move them to the beginning of the function in its internal understanding of the code. This phenomenon is called "hoisting." Since the process itself cannot be avoided, it is best to declare your variables at the top of a function's scope. Though, in practicality, it tends not to be an issue as long as you don't attempt to use variables before they are defined.
@@ -322,7 +326,7 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
 
     *Bonus:* The lowest increment that can be used reliably across various browsers is `15.6` milliseconds. This is due to an idiosyncrasy in Windows. More on that here&hellip;
 
-    http://www.nczonline.net/blog/2011/12/14/timer-resolution-in-browsers/
+    http://www.nczonline.net/blog/2011/12/14/timer-resolution-in-browsers
 
 16. Explain how `delete` works. What types of things cannot be deleted?
 
@@ -538,7 +542,7 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
 
     **Answer:**
 
-    To handle an arbitrary number of parameters passed into a function, JavaScript gives us the handy, built-in variable called `arguments`. Here, we can use `parseFloat`, to ensure we filter out any non-numeric values that might be passed in, while still allowing string representations of numbers to be converted.
+    To handle an arbitrary number of parameters passed into a function, JavaScript gives us the handy, built-in variable called `arguments`. Here, we can use `parseFloat`, to ensure we filter out any non-numeric values that might be passed in, while still allowing string representations of numbers to be converted. Also, values are multiplied by `10`, totaled, then divided by `10`, to account for any decimal oddities due to floating-point arithmetic.
 
     ```js
     function sum() {
