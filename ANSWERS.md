@@ -192,20 +192,20 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
 
     **Answer:**
 
-    Believe it or not, this is by design. It is simply how floating point calculations work, but does not make sense when you encounter it in practical usage. In order to do math with any sort of decimal precision, you need to multiply values by 10, do addition or subtraction as full integers, and then divide back by 10. It is a laborious, but necessary step, especially when calculating anything related to money in the browser.
+    Believe it or not, this is by design. It is simply how floating point calculations work, but does not make sense when you encounter it in practical usage. In order to do math with any kind of decimal precision, you need to multiply values by `10`, do addition or subtraction as full integers, and then divide back by `10`. It is a laborious, but necessary step, especially when calculating anything related to money in the browser.
 
 08. Describe how variable hoisting works, and how to avoid bugs that may arise from it.
 
-  Regardless of where you declare your variables within the scope of a function, the JavaScript interpreter will always move them to the beginning of the function in its internal understanding of the code. This phenomenon is called "hoisting." Since the process itself cannot be avoided, it is best to declare your variables as close to the top of a function's scope. Though, in practicality, it tends not to be an issue as long as you don't attempt to use variables before they are defined.
+  Regardless of where you declare your variables within the scope of a function, the JavaScript interpreter will always move them to the beginning of the function in its internal understanding of the code. This phenomenon is called "hoisting." Since the process itself cannot be avoided, it is best to declare your variables at the top of a function's scope. Though, in practicality, it tends not to be an issue as long as you don't attempt to use variables before they are defined.
 
 09. How do these differ?
 
     ```js
-    function foo(){}
+    function foo() {}
 
     // versus
 
-    var foo = function(){};
+    var foo = function() {};
     ```
 
     Declaring a function using the `function` keyword makes it available as the JavaScript interpreter parses the code (at a high level). Whereas, declaring a function using the `var` keyword makes it available only when it is encountered, line-by-line. This means a named function can be used before it is declared in the code. In practice, because of variable hoisting, one should always declare a function before using it, regardless of syntax.
@@ -314,7 +314,7 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
       call_me('setTimeout');
     }, five_seconds);
 
-    // This runs once, every 5 seconds
+    // This runs every 5 seconds
     setInterval(function() {
       call_me('setInterval');
     }, five_seconds);
@@ -444,7 +444,9 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
 
     **Answer:**
 
-    This is sometimes referred to as "short circuiting" a logical operator. You can think of it as a ternary with no `else` condition. This could be written out more verbosely as&hellip;
+    This is sometimes referred to as "short circuiting" a logical operator. You can think of it as a ternary with no `else` condition. Basically, the part before `&&` is evaluated, and if it is "truthy" (in this case, ensuring the existence of `foo`), the part after the `&&` is evaluated. In this case `foo.bar()` is a function, so it's executed.
+
+    This could be written out more verbosely as&hellip;
 
     ```js
     if (foo) {
@@ -465,7 +467,7 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
     log(1, 2, 3, 4, 5);
     ```
 
-20. How do `parseInt` and `parseFloat` differ? When would you use a number's `.toFixed` method? In what instance might the following code snippet actually make sense to use?
+20. How do `parseInt` and `parseFloat` differ? When would you use a number's `toFixed()` method? In what instance might the following code snippet actually make sense to use?
 
     ```js
     var my_number = my_string - 0;
@@ -477,7 +479,7 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
 
     The `parseFloat` function will convert any number or string into a decimal representation, also culling any string values that follow. Also, 'parseInt' requires a "radix" (usually `10`) to be passed in as the second parameter. Otherwise, values such as `09` change to `0` instead of `9`.
 
-    Using `parseFloat` will not convert a number into a certain number of decimal points. For instance, `"1.50"` (a string representing one dollar and fifty cents) would simply become `1.5`. To ensure a string representation of the correct number of decimal points, `.toFixed` must be used.
+    Using `parseFloat` will not convert a number into a certain number of decimal points. For instance, `"1.50"` (a string representing one dollar and fifty cents) would simply become `1.5`. To ensure a string representation of the correct number of decimal points, `toFixed()` must be used.
 
     ```js
     var radix = 10;
@@ -536,7 +538,7 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
 
     **Answer:**
 
-    To handle an arbitrary number of parameters passed into a function, JavaScript gives us the handy, built-in variable called `arguments`. Here, we can `parseFloat`, to ensure we filter out the non-numeric values that are passed in, but still allow for string representations of numbers.
+    To handle an arbitrary number of parameters passed into a function, JavaScript gives us the handy, built-in variable called `arguments`. Here, we can use `parseFloat`, to ensure we filter out any non-numeric values that might be passed in, while still allowing string representations of numbers to be converted.
 
     ```js
     function sum() {
