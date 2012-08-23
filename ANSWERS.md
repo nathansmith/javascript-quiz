@@ -327,7 +327,7 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
 
     Also, though potentially unreliable in multi-frame DOM environments, `instanceof` is a perfectly suited operator.
 
-    Context: "Instanceof Considered Harmful&hellip;"<br />
+    Context: *"Instanceof Considered Harmful&hellip;"*<br />
     http://perfectionkills.com/instanceof-considered-harmful-or-how-to-write-a-robust-isarray
 
     ```js
