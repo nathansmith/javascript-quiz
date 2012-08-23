@@ -229,18 +229,18 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
 
 10. When might you use a function's `call()` method, or its `apply()` method?
 
-    The `call()` method takes any number of parameters, the first of which is the context of `this`. Let's say you wanted to set properties on a constructor. That might look like this&hellip;
+    The `call()` method takes any number of parameters, the first of which is the context of `this`. Let's say you wanted to set properties on a constructor. Example&hellip;
 
     ```js
     function Person(first_name, last_name) {
-      // Default to John Doe
+      // Default to "John Doe"
       this.first_name = first_name || 'John';
       this.last_name = last_name || 'Doe';
 
       return this;
     }
 
-    // Change the defaults Pam Jones
+    // Change the defaults "Pam Jones"
     Person.call(this, 'Pam', 'Jones');
     ```
 
