@@ -12,7 +12,7 @@ The intent is to weed out some "Just use jQuery" applicants, but allow those tha
 
 02. Describe how variable scope works. Explain how to create a closure using a self-executing anonymous function (also called IIFE: immediately-invoked function expression).
 
-03. Explain briefly how prototypical inheritance differs from class-based, "classical" inheritance.
+03. Explain briefly how prototypal inheritance differs from class-based, "classical" inheritance.
 
 04. Describe how the "module pattern" works. Explain how the "revealing module pattern" expands upon it.
 

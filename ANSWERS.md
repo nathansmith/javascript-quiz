@@ -57,11 +57,11 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
     })();
     ```
 
-03. Explain briefly how prototypical inheritance differs from class-based, "classical" inheritance.
+03. Explain briefly how prototypal inheritance differs from class-based, "classical" inheritance.
 
     **Answer:**
 
-    Classical inheritance involves having a base template from which other things are created. For instance, one might have a class named `Animal`, from which you could create another class named `Dog`, and from that you could create an instance of a dog, named `sparky`. The same thing is true in Prototypical inheritance, except that if you changed something related to `Dog`, then `sparky` would immediately receive those attributes as well.
+    Classical inheritance involves having a base template from which other things are created. For instance, one might have a class named `Animal`, from which you could create another class named `Dog`, and from that you could create an instance of a dog, named `sparky`. The same thing is true in prototypal inheritance, except that if you changed something related to `Dog`, then `sparky` would immediately receive those attributes as well.
 
     ```js
     // Creating a base Animal, which is alive.
