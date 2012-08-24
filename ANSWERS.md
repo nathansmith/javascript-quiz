@@ -216,7 +216,7 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
     var foo = function() {};
     ```
 
-    Declaring a function using the `function` keyword makes it available as the JavaScript interpreter parses the code (at a high level). Whereas, declaring a function using the `var` keyword makes it available only when it is encountered, line-by-line. This means a named function can be used before it is declared in the code. In practice, because of variable hoisting, one should always declare a function before using it, regardless of syntax.
+    In the first case, a function named foo is being created. The interpreter parses function names before attempting to execute any code, so that function will be able to be called before it's declared. In the second case, an *anonymous* function is being defined with an expression and is assigned to a variable. Variables cannot be referenced before they are declared (and that function can't be called because it has no name). In practice, because of variable hoisting, one should always declare a function before using it, regardless of syntax.
 
     ```js
     // This breaks
