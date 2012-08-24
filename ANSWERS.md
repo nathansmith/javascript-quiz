@@ -216,7 +216,9 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
     var foo = function() {};
     ```
 
-    In the first case, a function named foo is being created. The interpreter parses function names before attempting to execute any code, so that function will be able to be called before it's declared. In the second case, an *anonymous* function is being defined with an expression and is assigned to a variable. Variables cannot be referenced before they are declared (and that function can't be called because it has no name). In practice, because of variable hoisting, one should always declare a function before using it, regardless of syntax.
+    In the first case, a function named `foo` is being created. The interpreter parses function names before attempting to execute any code, so that function can be able called before it's declared. In the second case, an *anonymous* function is being defined with an expression and is assigned to a variable.
+
+    Variables cannot be referenced before they are declared, and that function can't be called because it has no name. In practice, because of variable hoisting, one should always declare a function before using it, regardless of syntax.
 
     ```js
     // This breaks
