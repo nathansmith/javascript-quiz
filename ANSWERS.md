@@ -345,6 +345,8 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
 
     As of JavaScript 1.8.5 (ECMAScript 5), the aptly named `.isArray()` method serves this purpose&hellip;
 
+    https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Array/isArray
+
     ```js
     var my_array = [];
 
