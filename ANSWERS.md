@@ -62,15 +62,16 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
 
     **Answer:**
 
-    Classical inheritance involves having a base template from which other things are created. For instance, one might have a class named `Animal`, from which you could create another class named `Dog`, and from that you could create an instance of a dog, named `sparky`. The same thing is true in prototypal inheritance, except that if you changed something related to `Dog`, then `sparky` would immediately receive those attributes as well.
+    Classical and/or Prototypal inheritance involves having a base template from which other things are created. For instance, one might have a class named `Dog`, from which you could create an instance of a dog, named `sparky`. If you changed something related to `Dog`, then `sparky` may immediately receive those attributes as well.
+
+    Class based languages distinguish between templates (classes) and instances created from classes, whereas prototypal languages do not. The "super class" of an object is simply another instance. Examples of prototypal inheritance&hellip;
 
     ```js
-    // Creating a base Animal, which is alive.
-    function Animal() {}
-    Animal.prototype.is_alive = true;
+    // Creating a base Dog, which is alive.
+    function Dog() {}
+    Dog.prototype.is_alive = true;
 
-    // All instances of Dog will be alive.
-    var Dog = new Animal();
+    // All instances of Dog will have 4 legs.
     Dog.prototype.legs = 4;
 
     // Sparky is alive, has 4 legs, and is brown.
@@ -80,8 +81,8 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
     // Now sparky has 2 wings, as do all other dogs!
     Dog.prototype.wings = 2;
 
-    // We just killed all animals, including dogs, and sparky too. Oh no!
-    Animal.prototype.is_alive = false;
+    // We just killed all dogs, and sparky too. Oh no!
+    Dog.prototype.is_alive = false;
     ```
 
 04. Describe how the "module pattern" works. Explain how the "revealing module pattern" expands upon it.
