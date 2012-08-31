@@ -342,6 +342,8 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
       console.log('Congrats, you have an array!');
     }
     ```
+    
+    Perhaps the easiest way to check for an array is `Array.isArray([])` which would return `true`.
 
 12. In the following example, what is foo aliased to? (*Hint:* It is what `this` means.)
 
