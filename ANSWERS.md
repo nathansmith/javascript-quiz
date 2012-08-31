@@ -62,9 +62,9 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
 
     **Answer:**
 
-    Classical and prototypal inheritance both involve having a base template from which other things are created. For instance, one might have a class named `Dog`, from which you could create an instance of a dog, named `sparky`. If you changed something related to `Dog`, then `sparky` may immediately receive those attributes as well.
+    Classical and prototypal inheritance both involve having a base template from which other things are created. For example, one might have a class named `Dog`, from which you could create an instance of a dog, named `sparky`. If you changed something related to `Dog`, then `sparky` may immediately receive those attributes as well.
 
-    Class based languages distinguish between templates (classes) and instances created from classes, whereas prototypal languages do not. The "super class" of an object is simply another instance. Examples of prototypal inheritance&hellip;
+    Class based languages distinguish between templates (classes) and instances created from classes, whereas prototypal languages do not. The "super class" of an object in JavaScript is simply another instance.
 
     ```js
     // Creating a base Dog, which is alive.
