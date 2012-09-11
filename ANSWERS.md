@@ -250,11 +250,11 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
 
     // logs "John Doe is male"
     var john = new Person();
-    console.log(john.first_name, john.last_name, 'is ' + john.gender);
+    console.log(john.first_name, john.last_name, 'is', john.gender);
 
     // logs "Pam Jones is female"
     var pam = new Person('Pam', 'Jones', 'female');
-    console.log(pam.first_name, pam.last_name, 'is ' + pam.gender);
+    console.log(pam.first_name, pam.last_name, 'is', pam.gender);
     ```
 
     The `apply()` method is similar to `call()`, except that it takes a single array as its second parameter (instead of an arbitrary number of parameters). It is typically used to run built-in functions from object prototypes. The following example can take any number of values and concatenate them into a single string&hellip;
