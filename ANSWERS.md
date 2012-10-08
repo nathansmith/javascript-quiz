@@ -497,18 +497,18 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
     While you would typically use a library for DOM events, it's worth understanding how this works. Essentially, event delegation involves attaching an event listener to a higher-level element, and then determining if the event took place atop one of its children elements. The ability to watch for these events firing upwards to their parent is called "event bubbling." Here's how it would work&hellip;
 
     ```js
-    function handle_special_clicks(ev) {
-      var tag = ev.target.tagName.toLowerCase();
-
-      if (tag === 'a') {
-        // Don't follow the link
-        ev.preventDefault();
-
-        console.log('You clicked a special link!')
-      }
-    }
-
     (function(d) {
+      function handle_special_clicks(ev) {
+        var tag = ev.target.tagName.toLowerCase();
+
+        if (tag === 'a') {
+          // Don't follow the link
+          ev.preventDefault();
+
+          console.log('You clicked a special link!')
+        }
+      }
+
       var special = d.getElementById('special');
 
       // For modern browsers
