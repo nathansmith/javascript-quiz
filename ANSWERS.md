@@ -645,7 +645,7 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
 
     **Answer:**
 
-    To handle an arbitrary number of parameters passed into a function, JavaScript gives us the handy, built-in variable called `arguments`. Here, we can use `parseFloat`, to ensure we filter out any non-numeric values that might be passed in, while still allowing string representations of numbers to be converted. Also, values are multiplied by `10`, totaled, then divided by `10`, to account for any decimal oddities due to floating-point arithmetic.
+    To handle an arbitrary number of parameters passed into a function, JavaScript gives us the handy, built-in variable called `arguments`. Here, we can use `parseFloat`, to ensure we filter out any non-numeric values that might be passed in, while still allowing string representations of numbers to be converted. Also, values are multiplied by `1e12`, totaled, then divided by `1e12`, to account for any decimal oddities due to floating-point arithmetic.
 
     ```js
     function sum() {
@@ -653,7 +653,8 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
       var total = 0;
 
       // Floating-points, bah!
-      var ten = 10;
+      // 1e12 = 1000000000000.
+      var factor = 1e12;
 
       // Undefined, set in the loop
       var value;
@@ -665,7 +666,7 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
       while (i--) {
         // Multiply by 10, to account for peculiarities
         // of doing addition with floating-point numbers.
-        value = parseFloat(arguments[i]) * ten;
+        value = parseFloat(arguments[i]) * factor;
 
         // Is it not, not a number?
         // Then hey, it's a number!
@@ -676,6 +677,6 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
 
       // Divide back by 10, because we multiplied by
       // 10 to account for floating-point weirdness.
-      return total/ten;
+      return total/factor;
     }
     ```
