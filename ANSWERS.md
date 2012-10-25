@@ -652,8 +652,8 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
       // Start from zero
       var total = 0;
 
-      // Floating-points, bah!
-      var ten = 10;
+      // A large value for fixing floating point numbers
+      var largeValue = 1e12;
 
       // Undefined, set in the loop
       var value;
@@ -665,7 +665,7 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
       while (i--) {
         // Multiply by 10, to account for peculiarities
         // of doing addition with floating-point numbers.
-        value = parseFloat(arguments[i]) * ten;
+        value = parseFloat(arguments[i]);
 
         // Is it not, not a number?
         // Then hey, it's a number!
@@ -674,8 +674,9 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
         }
       }
 
-      // Divide back by 10, because we multiplied by
-      // 10 to account for floating-point weirdness.
-      return total/ten;
+      // Round the total multiplied by a large value (1x10^12)
+      // and then divide by the same large value to remove
+      // precision errors.
+      return Math.round(total * largeValue) / largeValue;
     }
     ```
