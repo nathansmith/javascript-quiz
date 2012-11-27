@@ -664,7 +664,7 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
 
       // Loop through all the parameters
       while (i--) {
-        // Multiply by 10, to account for peculiarities
+        // Multiply by 1e12, to account for peculiarities
         // of doing addition with floating-point numbers.
         value = parseFloat(arguments[i]) * factor;
 
@@ -675,8 +675,8 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
         }
       }
 
-      // Divide back by 10, because we multiplied by
-      // 10 to account for floating-point weirdness.
+      // Divide back by 1e12, because we multiplied by
+      // 1e12 to account for floating-point weirdness.
       return total/factor;
     }
     ```
