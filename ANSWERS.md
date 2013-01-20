@@ -650,7 +650,8 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
     ```js
     function add() {
       // Start from zero
-      var total = 0;
+      var int_total = 0, // integer total
+          dec_total = 0; // decimal total
 
       // Floating-points, bah!
       // 1e12 = 1000000000000.
@@ -662,21 +663,33 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
       // Something to iterate on
       var i = arguments.length;
 
+      // truncate a number
+      function truncate(v) {
+          return Math[v >= 0 ? 'floor' : 'ceil'](v);
+      }
+
       // Loop through all the parameters
       while (i--) {
         // Multiply by 1e12, to account for peculiarities
         // of doing addition with floating-point numbers.
-        value = parseFloat(arguments[i]) * factor;
+        value = parseFloat(arguments[i]);
 
         // Is it not, not a number?
         // Then hey, it's a number!
         if (!isNaN(value)) {
-          total += value;
+
+          int_total += truncate(value);
+
+          // Multiply the decimal part by 1e12,
+          // to account for peculiarities of
+          // doing addition with floating-point numbers.
+          dec_total += truncate(value % 1 * factor);
+
         }
       }
 
       // Divide back by 1e12, because we multiplied by
       // 1e12 to account for floating-point weirdness.
-      return total/factor;
+      return int_total + dec_total/factor;
     }
     ```
