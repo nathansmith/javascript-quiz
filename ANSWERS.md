@@ -678,14 +678,12 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
           is_negative = value < 0;
           value_split = value.toString().split('.');
           integer = parseFloat(value_split[0]);
-          integer = Math.abs(integer);
 
           // Multiply by 1e12, to account for peculiarities
           // of doing addition with floating-point numbers.
           decimal = parseFloat('.' + value_split[1]) * factor || 0;
-          decimal = Math.abs(decimal);
 
-          integer_total += is_negative ? integer * -1 : integer;
+          integer_total += integer;
           decimal_total += is_negative ? decimal * -1 : decimal;
         }
       }
