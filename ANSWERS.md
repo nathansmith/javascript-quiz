@@ -650,8 +650,8 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
     ```js
     function add() {
       // Start from zero
-      var int_total = 0, // integer total
-          dec_total = 0; // decimal total
+      var integer_total = 0; // Integer total
+      var decimal_total = 0; // Decimal total
 
       // Floating-points, bah!
       // 1e12 = 1000000000000.
@@ -659,37 +659,35 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
 
       // Undefined, set in the loop
       var value;
+      var value_split;
+      var integer;
+      var decimal;
 
       // Something to iterate on
       var i = arguments.length;
 
-      // truncate a number
-      function truncate(v) {
-          return Math[v >= 0 ? 'floor' : 'ceil'](v);
-      }
-
       // Loop through all the parameters
       while (i--) {
-        // Multiply by 1e12, to account for peculiarities
-        // of doing addition with floating-point numbers.
+        // Ensure real number
         value = parseFloat(arguments[i]);
 
         // Is it not, not a number?
         // Then hey, it's a number!
         if (!isNaN(value)) {
+          value_split = value.toString().split('.');
+          integer = parseFloat(value_split[0]);
 
-          int_total += truncate(value);
+          // Multiply by 1e12, to account for peculiarities
+          // of doing addition with floating-point numbers.
+          decimal = parseFloat('.' + value_split[1]) * factor || 0;
 
-          // Multiply the decimal part by 1e12,
-          // to account for peculiarities of
-          // doing addition with floating-point numbers.
-          dec_total += truncate(value % 1 * factor);
-
+          integer_total += integer;
+          decimal_total += decimal;
         }
       }
 
       // Divide back by 1e12, because we multiplied by
       // 1e12 to account for floating-point weirdness.
-      return int_total + dec_total/factor;
+      return integer_total + (decimal_total/factor);
     }
     ```
