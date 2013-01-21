@@ -660,7 +660,6 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
       // Undefined, set in the loop
       var value;
       var value_split;
-      var is_negative;
       var integer;
       var decimal;
 
