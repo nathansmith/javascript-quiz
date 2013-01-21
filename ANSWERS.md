@@ -675,7 +675,6 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
         // Is it not, not a number?
         // Then hey, it's a number!
         if (!isNaN(value)) {
-          is_negative = value < 0;
           value_split = value.toString().split('.');
           integer = parseFloat(value_split[0]);
 
@@ -684,7 +683,7 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
           decimal = parseFloat('.' + value_split[1]) * factor || 0;
 
           integer_total += integer;
-          decimal_total += is_negative ? decimal * -1 : decimal;
+          decimal_total += value < 0 ? decimal * -1 : decimal;
         }
       }
 
