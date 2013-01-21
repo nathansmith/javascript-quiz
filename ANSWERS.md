@@ -627,28 +627,28 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
     })(this.document);
     ```
 
-21. Write a function named `add` that returns the total of any number of parameters. Example&hellip;
+21. Write a function named `sum` that returns the total of any number of parameters. Example&hellip;
 
     ```js
     // Should equal 15
-    add(1, 2, 3, 4, 5);
+    sum(1, 2, 3, 4, 5);
 
     // Should equal 0
-    add(5, null, -5);
+    sum(5, null, -5);
 
     // Should equal 10
-    add('1.0', false, 1, true, 1, 'A', 1, 'B', 1, 'C', 1, 'D', 1, 'E', 1, 'F', 1, 'G', 1);
+    sum('1.0', false, 1, true, 1, 'A', 1, 'B', 1, 'C', 1, 'D', 1, 'E', 1, 'F', 1, 'G', 1);
 
     // Should equal 0.3, not 0.30000000000000004
-    add(0.1, 0.2);
+    sum(0.1, 0.2);
     ```
 
     **Answer:**
 
-    To handle an arbitrary number of parameters passed into a function, JavaScript gives us the handy, built-in variable called `arguments`. Here, we can use `parseFloat`, to ensure we filter out any non-numeric values that might be passed in, while still allowing string representations of numbers to be converted. Also, values are multiplied by `1e12`, totaled, then divided by `1e12`, to account for any decimal oddities due to floating-point arithmetic.
+    To handle an arbitrary number of parameters passed into a function, JavaScript gives us the handy, built-in variable called `arguments`. Here, we can use `parseFloat`, to ensure we filter out any non-numeric values that might be passed in, while still allowing string representations of numbers to be converted. Also, decimal values are multiplied by `1e12`, totaled, then divided by `1e12`, to account for any oddities due to floating-point arithmetic.
 
     ```js
-    function add() {
+    function sum() {
       // Start from zero
       var integer_total = 0; // Integer total
       var decimal_total = 0; // Decimal total

@@ -106,18 +106,18 @@ The intent is to weed out some "Just use jQuery" applicants, but allow those tha
     var my_number = my_string - 0;
     ```
 
-21. Write a function named `add` that returns the total of any number of parameters. Example&hellip;
+21. Write a function named `sum` that returns the total of any number of parameters. Example&hellip;
 
     ```js
     // Should equal 15
-    add(1, 2, 3, 4, 5);
+    sum(1, 2, 3, 4, 5);
 
     // Should equal 0
-    add(5, null, -5);
+    sum(5, null, -5);
 
     // Should equal 10
-    add('1.0', false, 1, true, 1, 'A', 1, 'B', 1, 'C', 1, 'D', 1, 'E', 1, 'F', 1, 'G', 1);
+    sum('1.0', false, 1, true, 1, 'A', 1, 'B', 1, 'C', 1, 'D', 1, 'E', 1, 'F', 1, 'G', 1);
 
     // Should equal 0.3, not 0.30000000000000004
-    add(0.1, 0.2);
+    sum(0.1, 0.2);
     ```
