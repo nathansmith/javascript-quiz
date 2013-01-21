@@ -688,6 +688,6 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
 
       // Divide back by 1e12, because we multiplied by
       // 1e12 to account for floating-point weirdness.
-      return integer_total + (decimal_total/factor);
+      return integer_total + decimal_total/factor;
     }
     ```
