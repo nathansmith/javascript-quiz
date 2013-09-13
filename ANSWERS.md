@@ -691,3 +691,47 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
       return integer_total + decimal_total/factor;
     }
     ```
+
+## BONUS Question
+
+When the following code is pasted into a browser's console, what does it output?
+
+    (function(window) {
+
+      var hello = 'Hello World';
+
+      var arr = [
+        '\x21',
+        '\x6E',
+        '\x61',
+        '\x6D',
+        '\x74',
+        '\x61',
+        '\x42'
+      ];
+
+      var str = '';
+      var i = 16;
+
+      while (i--) {
+        str += 1 * hello;
+        str += i % 2 === 0 ? '\x2C\x20' : '';
+      }
+
+      str = str.replace(/\x4E+/g, '\x6E');
+      str = str.replace(/\x6E\x2C/g, '\x2C');
+      str = str.slice(0, 1).toUpperCase() + str.slice(1, str.length);
+
+      str += arr.reverse().join('');
+
+      window.console.log(str);
+
+    })(this);
+
+The preceding code outputs:
+
+    Nana, nana, nana, nana, nana, nana, nana, nana, Batman!
+
+The "Hello World" bit is a red herring. That simply provides a string that, when multiplied by `1` returns `NaN` (not a number). We then manipulate our string of `NaN`, and concatenate it with the result of a reversed array `!namtaB` that becomes `Batman!`.
+
+The point of this question is just to put a smile on the face of anyone who ventures to try it out. We wouldn't expect anyone to actually be fluent in hexadecimal representations of letters and common characters.

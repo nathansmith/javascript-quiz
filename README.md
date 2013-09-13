@@ -121,3 +121,39 @@ The intent is to weed out some "Just use jQuery" applicants, but allow those tha
     // Should equal 0.3, not 0.30000000000000004
     sum(0.1, 0.2);
     ```
+
+## BONUS Question
+
+When the following code is pasted into a browser's console, what does it output?
+
+    (function(window) {
+
+      var hello = 'Hello World';
+
+      var arr = [
+        '\x21',
+        '\x6E',
+        '\x61',
+        '\x6D',
+        '\x74',
+        '\x61',
+        '\x42'
+      ];
+
+      var str = '';
+      var i = 16;
+
+      while (i--) {
+        str += 1 * hello;
+        str += i % 2 === 0 ? '\x2C\x20' : '';
+      }
+
+      str = str.replace(/\x4E+/g, '\x6E');
+      str = str.replace(/\x6E\x2C/g, '\x2C');
+      str = str.slice(0, 1).toUpperCase() + str.slice(1, str.length);
+
+      str += arr.reverse().join('');
+
+      window.console.log(str);
+
+    })(this);
