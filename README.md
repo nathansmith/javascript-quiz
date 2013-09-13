@@ -126,6 +126,7 @@ The intent is to weed out some "Just use jQuery" applicants, but allow those tha
 
 When the following code is pasted into a browser's console, what does it output?
 
+    ```js
     (function(window) {
 
       var hello = 'Hello World';
@@ -157,3 +158,4 @@ When the following code is pasted into a browser's console, what does it output?
       window.console.log(str);
 
     })(this);
+    ```

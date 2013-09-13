@@ -696,6 +696,7 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
 
 When the following code is pasted into a browser's console, what does it output?
 
+    ```js
     (function(window) {
 
       var hello = 'Hello World';
@@ -727,6 +728,7 @@ When the following code is pasted into a browser's console, what does it output?
       window.console.log(str);
 
     })(this);
+    ```
 
 The preceding code outputs:
 
