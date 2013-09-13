@@ -698,7 +698,6 @@ When the following code is pasted into a browser's console, what does it output?
 
     ```js
     (function(window) {
-
       var hello = 'Hello World';
 
       var arr = [
@@ -726,7 +725,6 @@ When the following code is pasted into a browser's console, what does it output?
       str += arr.reverse().join('');
 
       window.console.log(str);
-
     })(this);
     ```
 
