@@ -700,7 +700,7 @@ When the following code is pasted into a browser's console, what does it output?
 
 ```js
 (function(window) {
-  'use strict'
+  'use strict';
 
   var hello = 'Hello World';
 
