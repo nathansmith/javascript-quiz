@@ -649,6 +649,8 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
 
     ```js
     function sum() {
+      'use strict';
+   
       // Start from zero
       var integer_total = 0; // Integer total
       var decimal_total = 0; // Decimal total
@@ -698,6 +700,7 @@ When the following code is pasted into a browser's console, what does it output?
 
 ```js
 (function(window) {
+  'use strict'
 
   var hello = 'Hello World';
 
