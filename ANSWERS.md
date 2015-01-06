@@ -435,7 +435,7 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
 
     **Answer:**
 
-    Using `delete` will destroy variables and properties, making them `undefined` when you try to access them. Things that cannot be deleted include properties of objects created from a prototype (but you can delete properties of the prototype itself). Additionally, if you call `delete` on an item in an array, the array's `.length` is unaffected.
+    Using `delete` will destroy only properties of objects, making them `undefined` when you try to access them. Things that cannot be deleted include properties of objects created from a prototype (but you can delete properties of the prototype itself). Additionally, if you call `delete` on an item in an array, the array's `.length` is unaffected. Contrary to belief, using delete will not mark variables as 'undefined', and global variables are actually properties of the global object.
 
     ```js
     //
