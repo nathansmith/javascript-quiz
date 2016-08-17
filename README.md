@@ -121,6 +121,28 @@ The intent is to weed out some "Just use jQuery" applicants, but allow those tha
     // Should equal 0.3, not 0.30000000000000004
     sum(0.1, 0.2);
     ```
+22. What will be the output of the following program ?
+    ```js
+    var someVar = 7;
+    function func(someVar) {
+    someVar=4;
+    console.log(someVar);
+    }
+    func();
+    console.log(someVar);
+    ```
+
+23. What will be the output of the following program ?
+    
+```js
+    var someVar = 5;
+    function func() {
+    someVar=3;
+    console.log(someVar);
+    }
+    func();
+    console.log(someVar);
+```
 
 ## BONUS Question
 
