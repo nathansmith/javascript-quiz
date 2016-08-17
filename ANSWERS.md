@@ -693,7 +693,45 @@ Joking aside though, if you're a job applicant skimming these answers so that yo
       return integer_total + decimal_total/factor;
     }
     ```
-
+    
+22. What will be the output of the following program ?
+   ```js
+      var someVar = 7;
+      function func(someVar) {
+      someVar=4;
+      console.log(someVar);
+      }
+      func();
+      console.log(someVar);
+   ```
+   **Answer:**
+   ```js
+   4
+   7
+   ``` 
+   First we are defining variable someVar in global scope.Now,when func() called originally it is expecting an argument but we are not passing anything but the way i have passed the value it is pass by value. Hence,on execution of func() it will create local variable someVar and assigned it to the undefined because we passed nothing.After this someVar will be given value 4. Hence it will log output 4. On the completion of the func() variable someVar is destroyed because of the function func(). Function in js defined local scope. Hence second console.log will going to print value 7.
+   
+   
+23. What will be the output of the following program ?
+   
+   ```js
+      var someVar = 7;
+      function func() {
+      someVar=4;
+      console.log(someVar);
+      }
+      func();
+      console.log(someVar);
+   ```
+   **Answer:**
+  
+   ```js
+   4
+   4
+   ``` 
+   
+   First we are defining variable someVar in global scope.when func() is called it is changing the value of someVar which is physically defined in global scope only we have not defined it into the function's lexical scope. hence call to func will update the value of someVar which is in global scope. So,both the console.log will going to print value = 4.
+   
 ## BONUS Question
 
 When the following code is pasted into a browser's console, what does it output?
