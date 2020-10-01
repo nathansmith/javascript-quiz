@@ -6,7 +6,7 @@ The purpose of this quiz isn't to be a brain-buster. It is meant for recruiters 
 
 The intent is to weed out some "Just use jQuery" applicants, but allow those that know JavaScript to pass fairly easily.
 
-## Intro Questions
+## Introduction Questions
 
 01. When might comparative type coercion occur? How would you avoid it? How would you change a "falsy" or "truthy" value into a real boolean?
 
